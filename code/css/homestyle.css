@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e21b1b, #c20000);
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    transform: translateY(-30px);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.button {
+    background: linear-gradient(135deg, #e21b1b, #c20000);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+    border: 2px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #c20000;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-group .button {
+    width: 48%; 
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-group .button {
+        width: 100%;
+    }
+}
